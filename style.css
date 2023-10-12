@@ -1,0 +1,176 @@
+body {
+  color: #403336;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to bottom, white, lightblue);
+  background-size: 100% 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  align-items: center;
+  gap: 10px;
+}
+.header {
+  font-weight: bold;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.title {
+  margin: 20px;
+  padding-top: 20px;
+}
+.login {
+  display: flex;
+  gap: clamp(2vw, 25px, 10vw);
+}
+.link:hover {
+  color: #9aafd9;
+}
+.link{
+    margin: 0 5px;
+}
+.cardStack {
+  height: clamp(65vh, 70vh, 100%);
+  width: 100%;
+  padding: 25px 0px 25px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  font-size: medium;
+  color: #58594c;
+  text-align: center;
+  border: 1px solid lightblue;
+  margin: 10px;
+  padding: 20px 10px 10px 10px;
+  width: clamp(80vw, 95%, 98vw);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 8fr 1fr 1fr;
+}
+
+.read-status {
+  grid-column: 2;
+  text-align: center;
+}
+
+.remove-button {
+  grid-column: 3;
+  text-align: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#addBook {
+  width: clamp(30vw, 75px, 60vw);
+  height: clamp(45px, 50px, 10vh);
+  font-size: clamp(10px, 20px, 30vw);
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  border: 2px solid lightblue;
+}
+
+#addBook:hover {
+  border: 4px solid lightblue;
+}
+#addBook:active {
+  background-color: #9aafd9;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-button {
+  width: 95%;
+  height: clamp(20px, 34px, 15vh);
+  font-size: clamp(8px, 20px, 20vw);
+  margin: 10px 10px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #a6a6a6;
+}
+
+.card-button {
+  margin: 5px 10px 5px 10px;
+  font-size: 18px;
+  width: clamp(10vw, 60px, 30vw);
+  height: clamp(10vh, 60px, 30vh);
+  border-radius: 10px;
+  border: 2px solid #a6a6a6;
+  overflow: hidden;
+}
+
+.dialog-button:hover {
+  border: 3px solid #a6a6a6;
+}
+
+.card-button:hover {
+  border: 3px solid lightpink;
+}
+
+.stack {
+  width: 100%;
+  min-height: 66vh;
+  max-height: 100%;
+  gap: 10px;
+}
+.footer {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #a6a6a6;
+}
+a:visited {
+  color: #a6a6a6;
+}
+
+.bookDialog {
+  padding: 1em;
+  min-width: 30vw;
+  max-width: 50ch;
+  min-height: 40vh;
+  max-height: 50ch;
+  border-radius: 15px;
+}
+
+.bookDialog::backdrop {
+  background: lightgray;
+  opacity: 0.3;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-field label {
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.input-field input {
+  border: 1px solid #2e2e2e;
+  border-radius: 5px;
+  padding: 0 15px;
+  height: 40px;
+  width: 90%;
+  margin: 5px 0;
+}
+
+#readStatus {
+  margin-bottom: 25px;
+}

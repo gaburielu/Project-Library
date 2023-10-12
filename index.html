@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="icon" href="/open-book.png" />
+    <title>Project Library</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Project Library</h1>
+      <div class="login">
+        <a href="#" class="link">Login</a>
+        <a href="#" class="link">Sign Up</a>
+      </div>
+    </div>
+    <div class="cardStack">
+      <div class="addBook">
+        <button id="addBook">Add Book</button>
+      </div>
+      <dialog class="bookDialog" id="form-popup">
+        <form id="form" action="">
+          <div class="bookForm">
+            <div class="input-field">
+              <label for="title">Title: </label>
+              <input type="text" id="title" name="title" required /><br /><br />
+            </div>
+            <div class="input-field">
+              <label for="author">Author: </label>
+              <input
+                type="text"
+                id="author"
+                name="author"
+                required
+              /><br /><br />
+            </div>
+            <div class="input-field">
+              <label for="pages">Pages: </label>
+              <input
+                type="number"
+                id="pages"
+                name="pages"
+                min="3"
+                max="10000"
+                required
+              /><br /><br />
+            </div>
+            <input type="checkbox" id="readStatus" />
+            <label for="readStatus">Have you read the book?</label>
+          </div>
+          <div class="dialogFormButton">
+            <input class="dialog-button" type="submit" value="Submit" />
+          </div>
+        </form>
+        <button class="dialog-button" id="closeForm">Cancel</button>
+      </dialog>
+      <div class="stack" id="cardContainer">
+      </div>
+    </div>
+    <div class="footer">
+      <p class="acknowledgement" style="text-align: center;">
+        Made by ©
+        <a href="https://github.com/Gaburielu" class="link">Gaburielu</a> 2023 |
+        <a href="https://www.theodinproject.com/about" class="link"
+          >The Odin Project</a
+        > | <a href="https://github.com/gaburielu/Project-Library/blob/main/README.md" class="link"
+        >Source Code & Credit</a
+      >
+      </p>
+    </div>
+  </body>
+</html>
