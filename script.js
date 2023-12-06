@@ -5,24 +5,28 @@ const closeForm = document.getElementById("closeForm");
 const submit = document.getElementById("form");
 const myLibrary = [];
 
-function Book(title, author, pages) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = false;
-  this.info = function () {
+class Book {
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = false;
+  }
+
+  info() {
     return `
       <span style="color: black">${this.title}</span> by
       <span style="color: black">${this.author}</span>,
       <span style="color: black">${this.pages}</span> pages,
       ${
         this.read
-          ? '<p style="color: #031740">have read</p>'
-          : '<p style="color: #73122C">have not read</p>'
+          ? '<p style="color: #031740">Have read</p>'
+          : '<p style="color: #73122C">Have not read</p>'
       }
     `;
-  };
+  }
 }
+
 function addBookToLibrary(title, author, pages, read) {
   const duplicateBook = myLibrary.find(
     (book) => book.title === title && book.author === author
